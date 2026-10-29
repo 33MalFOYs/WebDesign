@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product-Catalog</title>
-</head>
-<body>
-    <h2>Product-Catalog</h2>
-        <table style="border: 1px solid black; border-collapse: collapse;">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <th style="border: 1px solid black; border-collapse: collapse;">Product Name</th>
-                <th style="border: 1px solid black; border-collapse: collapse;">Price</th>
-                <th style="border: 1px solid black; border-collapse: collapse;">Quantity</th>
-                <th style="border: 1px solid black; border-collapse: collapse;">In Stock</th>
-            </tr>
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">T-Shirt</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">10$</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">20 </td>
-                <td style="border: 1px solid black; border-collapse: collapse;">Yes</td>
-            </tr>
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">Denim</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">15$</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">1862</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">Yes</td>
-            </tr>
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">Jacket</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">13$</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">12</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">Yes</td>
-            </tr>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="profile-card">
+      <button class="menu-button" type="button" aria-label="Open profile menu">
+        &#8942;
+      </button>
+
+      <img
+        class="profile-picture"
+        src="https://tse1.mm.bing.net/th/id/OIP.SNE8ATm0z3J9CAvGQRjXnAHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+        alt="Profile picture of Sathish Kumar"
+      />
+
+      <h1>Steav Phoum</h1>
+      <p class="role">UI/UX Mobile Designer</p>
+
+      <dl class="profile-stats">
+        <div>
+          <dt>Projects</dt>
+          <dd>17</dd>
+        </div>
+        <div>
+          <dt>Following</dt>
+          <dd>159</dd>
+        </div>
+        <div>
+          <dt>Followers</dt>
+          <dd>205</dd>
+        </div>
+      </dl>
+
+      <p class="bio">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est
+        velit ornare sollicitudin vitae diam volutpat.
+      </p>
+
+      <nav class="social-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Twitter">♥</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Dribbble">●</a>
+      </nav>
+
+      <a class="profile-button" href="#">View Profile</a>
+    </main>
+  </body>
 </html>
