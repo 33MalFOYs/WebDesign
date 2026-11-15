@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Pricing Table</title>
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 18px 24px 30px;
+        background: #f5f5f5;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+
+
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        width: 100%;
+        max-width: 704px;
+        margin: 0 auto;
+      }
+
+
+
+      .pricing-plan {
+        --gradient: linear-gradient(110deg, #00c8b9, #00b4de);
+        --accent: #00bcae;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
+        min-height: 364px;
+        overflow: hidden;
+        border-radius: 15px;
+        background: #fff;
+        text-align: center;
+        box-shadow: 10px 13px 18px rgba(0, 0, 0, 0.22);
+      }
+
+
+
+      .pricing-plan:nth-child(2) {
+        --gradient: linear-gradient(110deg, #00b7e5, #8031dc);
+        --accent: #387eb2;
+      }
+
+
+      .pricing-plan:nth-child(3) {
+        --gradient: linear-gradient(110deg, #8836e1, #e31ba3);
+        --accent: #65447b;
+      }
+
+
+
+      .plan-title {
+        margin: 0;
+        padding: 23px 10px 15px;
+        background: var(--gradient);
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+
+
+      .plan-price {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 5px;
+        margin: 21px 10px 22px;
+        color: var(--accent);
+        white-space: nowrap;
+      }
+
+      .currency {
+        align-self: flex-start;
+        padding-top: 5px;
+        font-size: 18px;
+      }
+
+   
+
+      .amount {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+
+      .period {
+        font-size: 12px;
+      }
+
+
+      .plan-features {
+        margin: 0 27px;
+        padding: 0;
+        list-style: none;
+        color: #999;
+        font-size: 10px;
+      }
+
+
+      .plan-features li {
+        padding: 7px 0;
+        border-top: 1px solid #eee;
+      }
+
+
+
+      .plan-features li:last-child {
+        border-bottom: 1px solid #eee;
+      }
+
+
+      .plan-button {
+        width: 133px;
+        max-width: calc(100% - 32px);
+        margin: auto auto 28px;
+        padding: 9px 16px;
+        border: 0;
+        border-radius: 30px;
+        background: var(--gradient);
+        color: #fff;
+        font: 700 12px Arial, Helvetica, sans-serif;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+      }
+
+
+
+      .plan-button:hover {
+        filter: brightness(1.08);
+      }
+
+      .plan-button:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+
+      @media (max-width: 650px) {
+
+        .pricing-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+
+        .pricing-plan {
+          flex: none;
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <main class="pricing-container" aria-label="Pricing plans">
+
+      <section class="pricing-plan" aria-labelledby="free-title">
+
+        <h2 class="plan-title" id="free-title">Free</h2>
+
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">0</span>
+          <span class="period">USD / MONTH</span>
+        </div>
+
+        <ul class="plan-features">
+          <li>150 Products</li>
+          <li>5 Email Accounts</li>
+          <li>2 GB Bandwidth</li>
+          <li>500 GB Storage</li>
+        </ul>
+
+        <button class="plan-button" type="button" aria-label="Select Free plan">SELECT</button>
+      </section>
+
+      <section class="pricing-plan" aria-labelledby="basic-title">
+      
+        <h2 class="plan-title" id="basic-title">Basic</h2>
+
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">39</span>
+          <span class="period">USD / MONTH</span>
+        </div>
+
+        <ul class="plan-features">
+          <li>1 500 Products</li>
+          <li>10 Email Accounts</li>
+          <li>6 GB Bandwidth</li>
+          <li>2 GB Storage</li>
+        </ul>
+
+        <button class="plan-button" type="button" aria-label="Select Basic plan">SELECT</button>
+      </section>
+      <section class="pricing-plan" aria-labelledby="premium-title">
+        <h2 class="plan-title" id="premium-title">Premium</h2>
+
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">129</span>
+          <span class="period">USD / MONTH</span>
+        </div>
+
+        <ul class="plan-features">
+          <li>10 000 Products</li>
+          <li>20 Email Accounts</li>
+          <li>Unlimited Bandwidth</li>
+          <li>5 GB Storage</li>
+        </ul>
+        <button class="plan-button" type="button" aria-label="Select Premium plan">SELECT</button>
+      </section>
+    </main>
+  </body>
+</html>
+
