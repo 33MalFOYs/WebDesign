@@ -1,0 +1,27 @@
+.sitenav{
+    background-color:#656565;
+    height:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    padding:1rem;
+    color:aliceblue;
+}
+.rightbar{
+justify-content:end;
+display:grid;
+grid-template-columns: repeat(4,1fr) ;
+}
+.burger-button {
+  background-color:#656565;
+  border:none;
+  display: none;
+  text-align:end;
+  font-size:large;
+}
+
+@media (max-width: 767px) {
+  .rightbar{display:none;}
+  .burger-button {
+    display: block;
+  }
+}
